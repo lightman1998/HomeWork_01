@@ -17,13 +17,13 @@ public:
 	stack() {
 		array_size_ = 10;
 		array_ = new T[array_size_];
-		count_ = 0;
+		count_ = 1;
 	}
 
 	stack(size_t n) {
 		array_size_ = n;
 		array_ = new T[array_size_];
-		count_ = 0;
+		count_ = 1;
 	}
 
 	size_t count() const {
