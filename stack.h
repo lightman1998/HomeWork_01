@@ -17,6 +17,7 @@ public:
 	stack() {
 		array_size_ = 10;
 		array_ = new T[array_size_];
+		count_ = 0;
 	}
 
 	stack(size_t n) {
