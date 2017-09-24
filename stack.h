@@ -43,9 +43,7 @@ public:
 
 	T pop() {
 		assert(count_ > 0);
-		array_[--count_];
-		return array_[count_];
-
+		return array_[--count_];
 	}
 
 	void print_stack() {
