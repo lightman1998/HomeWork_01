@@ -42,7 +42,7 @@ public:
 	}
 
 	T pop() {
-		assert(count_ > 0);
+		assert(count_ != 0);
 		return array_[--count_];
 	}
 
