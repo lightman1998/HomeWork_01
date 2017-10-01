@@ -52,4 +52,4 @@ public:
 	}
 };
 
-#endif /*stack_h*/
+#endif /*STACK_H*/
