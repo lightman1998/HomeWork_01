@@ -2,7 +2,6 @@
 #define STACK_H
 
 #include <iostream>
-#include <cassert>
 
 using namespace std;
 
@@ -17,13 +16,13 @@ public:
 	stack() {
 		array_size_ = 10;
 		array_ = new T[array_size_];
-		count_ = 1;
+		count_ = 0;
 	}
 
 	stack(size_t n) {
 		array_size_ = n;
 		array_ = new T[array_size_];
-		count_ = 1;
+		count_ = 0;
 	}
 
 	size_t count() const {
@@ -42,12 +41,14 @@ public:
 	}
 
 	T pop() {
-		assert(count_ != 0);
-		return array_[--count_];
+		if (count_ != 0) {
+			return array_[--count_]; }
+		else 
+			throw runtime_error("stack() is empty");
 	}
 
 	void print_stack() {
-		for (size_t i = count_ - 1; i > 0; i--)
+		for (size_t i = count_ -1; i < array_size_; i--)
 			cout << array_[i] << endl;
 	}
 };
