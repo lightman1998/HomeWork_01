@@ -1,5 +1,5 @@
-#ifndef Stack_h
-#define Stack_h
+#ifndef STACK_H
+#define STACK_H
 
 #include <iostream>
 #include <cassert>
@@ -52,4 +52,4 @@ public:
 	}
 };
 
-#endif
+#endif stack_h
